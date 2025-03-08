@@ -1,0 +1,21 @@
+method: grid
+metric:
+  name: test/new_caption/image_to_text_R@1
+  goal: maximize
+parameters:
+  batch_size:
+    values: [2]
+  group_size:
+    values: [10]
+  learning_rate:
+    values: [1e-8]
+  num_epochs:
+    values: [7]
+  alpha:
+    values: [0.7]
+  tau:
+    values: [0.1]
+  loss:
+    values: [3]
+  dataset_type:
+    values: ["train"]

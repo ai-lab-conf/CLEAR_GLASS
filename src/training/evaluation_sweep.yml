@@ -1,0 +1,41 @@
+method: grid
+metric:
+  name: val/image_to_text_R@1
+  goal: maximize
+parameters:
+  batch_size:
+    values: [2]
+  group_size:
+    values: [2]
+  learning_rate:
+    # values: [1e-4, 1e-5, 1e-6]
+    values: [1e-6]
+  num_epochs:
+    values: [1]
+  alpha:
+    values: [0.5]
+  tau:
+    values: [1]
+  loss:
+    values: [1]
+  dataset_type:
+    # values: ["hierarcaps", "breeds"]
+    values: ["hierarcaps"]
+  eval_type:
+    # values: ["new_caption", "old_caption", "concept_level1", "concept_level2", "concept_level3", "concept_level4"]
+    values: ["concept_level1", "concept_level2", "concept_level3", "concept_level4"]
+    # values: ["concept_level4"]
+  model:
+    values: ["hierarcaps"]
+  model_path:
+    # values: ["frozen_conclip","-model_open_clip-b_2-gs_10-e_3-loss_1", "-model_open_clip-b_2-gs_10-e_3-loss_2", "-model_open_clip-b_2-gs_10-e_5-loss_1", "-model_open_clip-b_2-gs_10-e_5-loss_2", "-model_open_clip-b_2-gs_10-e_7-loss_1", "-model_open_clip-b_2-gs_10-e_7-loss_2", "frozen_clip", "frozen_negClip", "frozen_ConvNext", "frozen_SigLip", "frozen_COCA", "frozen_hierarCaps", "frozen_DFN", "frozen_EVA02-B-16", "frozen_ce-clip"]
+    # values: ["-model_open_clip-b_2-gs_10-e_3-loss_2", "-model_open_clip-b_2-gs_10-e_5-loss_1", "-model_open_clip-b_2-gs_10-e_5-loss_2", "-model_open_clip-b_2-gs_10-e_7-loss_1", "-model_open_clip-b_2-gs_10-e_7-loss_2", "frozen_clip", "frozen_negClip", "frozen_ConvNext", "frozen_SigLip", "frozen_COCA", "frozen_hierarCaps", "frozen_DFN", "frozen_EVA02-B-16", "frozen_ce-clip"]
+    # values: ["-model_open_clip-b_2-gs_10-e_3-loss_1", "-model_open_clip-b_2-gs_10-e_3-loss_2", "-model_open_clip-b_2-gs_10-e_5-loss_1", "-model_open_clip-b_2-gs_10-e_5-loss_2", "-model_open_clip-b_2-gs_10-e_7-loss_1", "-model_open_clip-b_2-gs_10-e_7-loss_2"]
+
+    # values: ["-model_eva-b_2-gs_10-e_3-loss_3", "-model_eva-b_2-gs_10-e_5-loss_3", "-model_eva-b_2-gs_10-e_7-loss_3"]
+
+    # values: ["-model_open_clip-b_2-gs_10-e_3-loss_3", "-model_open_clip-b_2-gs_10-e_5-loss_3", "-model_open_clip-b_2-gs_10-e_7-loss_3"]
+
+    values: ["model_hierarcaps-b_2-gs_10-e_5-loss_3", "model_hierarcaps-b_2-gs_10-e_7gi-loss_3"]
+  
+  

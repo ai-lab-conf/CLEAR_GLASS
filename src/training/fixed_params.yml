@@ -1,0 +1,19 @@
+method: grid
+metric:
+  name: val/image_to_text_R@1
+  goal: maximize
+parameters:
+  batch_size:
+    values: [2,3,4]
+  group_size:
+    values: [3,5,10]
+  learning_rate:
+    values: [1e-8]
+  num_epochs:
+    values: [24]
+  alpha:
+    values: [0.7]
+  tau:
+    values: [0.1]
+  loss:
+    values: [1]
